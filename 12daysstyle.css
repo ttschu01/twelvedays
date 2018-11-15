@@ -1,0 +1,337 @@
+body {
+    position: relative;
+    background-image: url('images/background-tile-2x.jpg');
+    background-size: 100%;
+    background-position: 300px;
+    background-repeat: repeat;
+    overflow: auto;
+    padding: 0;
+    text-align: center;
+}
+
+/* BACKGROUND TILE  */
+.container-fluid {
+    padding: 0;
+}
+
+
+.container-content {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    top: 260px;
+    z-index: 1;
+}
+
+@media (max-width: 552px) {
+    .container-content {
+    position: static;
+    }
+}
+
+/* HEADER IMAGE */
+
+.desktop-header {
+    object-fit: cover;
+    background: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.mobile-header {
+    display: none;
+}
+
+@media (max-width: 552px) {
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: block;
+        background: cover;
+        position: static;
+        left: 0px;
+        top: 0px;
+        z-index: auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* COUNTDOWN TIMER */
+#the-final-countdown {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 38px;
+    color: #E50019;
+    padding: 0;
+    margin: 0;
+    font-size: 38px;
+    border: none;
+}
+
+.countdown-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    background: transparent;
+    margin-bottom: 40px;
+    position: relative;
+    top: 255px;
+    z-index: 0;
+}
+
+.countdown-box img {
+    width: 280px;
+    height: 100%;
+    padding: 0px 10px 0px 0px;
+}
+
+@media (max-width: 552px) {
+    .countdown-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        background: #000;
+        position: static;
+        
+    }
+
+    #the-final-countdown {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    .countdown-box img {
+        width: 220px;
+        height: 100%;
+        padding: 10px 0px 0px 0px;
+    }
+
+    
+}
+
+/* PROMO PARAGRAPH */
+
+.promo-paragraph p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 552px) {
+    .promo-paragraph p {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+}
+
+/* BRONTO SIGN UP FORM */
+
+.signup-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background: #000;
+}
+
+.signup-box img {
+    width: 308px;
+    height: 29px;
+    margin-top: 25px;
+}
+
+
+/* The form element is the main container for the entire page and is centered on the page by default. This width is dynamically calculated based on the maximum width of the rows within it. */
+form {
+    width: 780px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    margin: 0 auto;
+}
+
+/* This is the style for each individual row. */
+form .section {
+    clear: both;
+}
+
+/* This is the style for each column within a row. */
+form .section .container {
+    float: left;
+}
+
+/* This surrounds every field and caption area. */
+.field_block {
+    display: block;
+    padding: 0;
+    margin: 0 0 6px 0;
+}
+
+/* A field's caption normally surrounds its label element. */
+.field_block .caption {
+    display: block;
+    font: bold 12px "Lucida Grande", "Verdana", sans-serif;
+    color: #fbf7f1;
+    padding: 0;
+    margin: 0 0 4px 0;
+}
+
+/* The following are special styles for the layout of checkbox and radio fields */
+.field_block .checkbox .caption {
+    display: inline;
+    margin: 0;
+}
+
+.field_block div.radio span {
+    display: block;
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.field_block div.radio span input.radio {
+    display: inline;
+    padding-right: 5px;
+}
+
+.field_block div.radio span label {
+    font: normal 11px "Lucida Grande", "Verdana", sans-serif;
+    color: #fbf7f1;
+}
+
+/* This is the individual field input. */
+.field_block .field {
+    padding: 0;
+    margin: 0;
+}
+
+/* The style for field-level errors */
+.field_block .field .field_error {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    color: #f00;
+    font-weight: bold;
+}
+
+/* The styles for individual field types */
+.field_block .field input.text,
+.field_block .field input.float,
+.field_block .field input.password,
+.field_block .field input.integer,
+.field_block .field input.currency,
+.field_block .field input.date {
+    border: 1px solid #ccc;
+    border-top-color: #444;
+    border-left-color: #444;
+    font: normal 11px "Lucida Grande", "Verdana", sans-serif;
+    color: #fbf7f1;
+    padding: 3px;
+    margin: 0;
+    width: 190px;
+}
+
+.field_block .field input.date {
+    width: 102px;
+}
+
+.field_block .field input.phone {
+    width: 250px;
+    font-size: 12px;
+    padding: 3px 12px 3px 44px;
+}
+
+.signup-btn {
+    background: #e50019;
+    border: solid 3px transparent;
+    color: #fbf7f1;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'UnitedSansReg-bold';
+    font-weight: 400;
+    transition: .3s;
+    padding: 10px 100px 0px 100px;
+    margin: 10px 0px;
+}
+
+.signup-btn:hover {
+    background: #211d14;
+    border: solid 3px transparent;
+}
+
+.signup-btn:active {
+    background: #e50019;
+    border: solid 3px #fff;
+}
+
+
+/* The styles for textareas are slightly larger than by default with no CSS */
+.field_block .field textarea {
+    width: 300px;
+    height: 150px;
+}
+
+/* This can be applied to any field element to make it wider than the default above */
+.field_block .field input.wide {
+    width: 300px;
+}
+
+/* This can be applied to any field element to make it narrower than the default above */
+.field_block .field input.narrow {
+    width: 100px;
+}
+
+/* A dropdown menu within a field is styled here. */
+.field_block .field select,
+.field_block .field select option {
+    width: 200px;
+}
+
+/* Required fields are red and bold by default. */
+.required {
+    color: #f00;
+    font-weight: bold;
+}
+
+@media (max-width: 552px) {
+    /* Put Mobile Form Style Here */
+}
+
+
+/* CARDS */
+
+.row {
+    margin: 0;
+}
+
+.giveaway-card {
+    padding: 0;
+}
+
+.card-img {
+    padding: 8px;
+}
+
+/* Disclaimer Copy */
+.disclaimer-p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #707070;
+}
